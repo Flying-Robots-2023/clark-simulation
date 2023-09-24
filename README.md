@@ -24,7 +24,7 @@ docker build -t rtabmap_drone_example -f docker/Dockerfile .
 
 -----
 
-Abra quatro terminais com o `run.sh`, e tente executar oque esta no git https://github.com/matlabbe/rtabmap_drone_example
+Abra quatro terminais com o `run.sh`, e tente executar oque esta no git [matlabbe_rtabmap_drone](https://github.com/matlabbe/rtabmap_drone_example)
 
 1. Terminal do Gazebo
    
