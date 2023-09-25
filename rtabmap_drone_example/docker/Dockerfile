@@ -84,7 +84,7 @@ WORKDIR /worlds
 
 RUN git clone https://github.com/Flying-Robots-LARC/mrs_gazebo_common_resources.git && \
     git clone https://github.com/Flying-Robots-LARC/Petrobras_Competition.git && \
-    cp -r /worlds/Petrobras_Competition/models /usr/share/gazeb-11/ && \
+    cp -r /worlds/Petrobras_Competition/models /usr/share/gazebo-11/ && \
     cp -r /worlds/mrs_gazebo_common_resources/models /usr/share/gazebo-11/
 
 
