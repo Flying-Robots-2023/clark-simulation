@@ -6,7 +6,7 @@ Para conseguir rodar a simulação, sera necessario arrumar algumas coisas
 1. Copiar os arquivos desse github para o seu diretorio de preferencia
 
 ```
-git clone git@github.com:Flying-Robots-LARC/clark-simulation.git
+git clone https://github.com/Flying-Robots-LARC/clark-simulation.git
 ```
 
 2. Buildar o Dockerfile
