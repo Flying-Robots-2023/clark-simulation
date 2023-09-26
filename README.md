@@ -26,10 +26,10 @@ docker build -t rtabmap_drone_example -f docker/Dockerfile .
 
 Abra quatro terminais com o `run.sh`, e tente executar oque esta no git [matlabbe_rtabmap_drone](https://github.com/matlabbe/rtabmap_drone_example)
 
-1. Terminal do Gazebo, troque "fase1" em `world_name` e em `world` para a arena que deseja simular
+1. Terminal do Gazebo, troque "fase1" em `world` para a arena que deseja simular
    
 ```
-roslaunch rtabmap_drone_example gazebo.launch world_name:="fase1" world:="/worlds/Petrobras_Competition/worlds/fase1.world"
+roslaunch rtabmap_drone_example gazebo.launch world:="/worlds/Petrobras_Competition/worlds/fase1.world"
 
 ```
 
