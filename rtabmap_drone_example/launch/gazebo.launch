@@ -24,6 +24,6 @@
 
     <!-- Spawn drone -->
     <include file="$(find rtabmap_drone_example)/launch/spawn_drone.launch">
-        <arg name="yaw" value="-1.5"/>
+        <arg name="yaw" value="-3.14"/>
     </include>
 </launch>
