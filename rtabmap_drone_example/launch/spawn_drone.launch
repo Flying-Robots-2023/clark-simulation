@@ -10,7 +10,7 @@
   <env name="PX4_ESTIMATOR" value="$(arg est)" />
   <arg name="scale" default="0.6"/>
   <arg name="x" default="8.25"/>
-  <arg name="y" default="2.25"/>
+  <arg name="y" default="2.225"/>
   <arg name="z" default="0.58"/>
   <arg name="yaw" default="0"/>
   <!-- MAVROS configs -->
