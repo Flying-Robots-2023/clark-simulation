@@ -45,7 +45,7 @@ RUN source /ros_entrypoint.sh && \
     cd ~/catkin_ws/src && \
     catkin_init_workspace && \
     git clone https://github.com/mavlink/mavros.git && \
-    git clone https://github.com/Flying-Robots-LARC/realsense_gazebo_plugin.git && \
+    git clone -b melodic-devel https://github.com/Pequi-Mecanico-Home/realsense_gazebo_plugin.git && \
     cd mavros && \
     git checkout 1.9.0 && \
     ./mavros/scripts/install_geographiclib_datasets.sh && \
@@ -62,11 +62,11 @@ RUN source /ros_entrypoint.sh && \
     cd && \
     rm -rf ~/catkin_ws
     
-# nvidia-container-runtime
-# ENV NVIDIA_VISIBLE_DEVICES \
-#     ${NVIDIA_VISIBLE_DEVICES:-all}
-# ENV NVIDIA_DRIVER_CAPABILITIES \
-#     ${NVIDIA_DRIVER_CAPABILITIES:+$NVIDIA_DRIVER_CAPABILITIES,}graphics
+nvidia-container-runtime
+ENV NVIDIA_VISIBLE_DEVICES \
+     ${NVIDIA_VISIBLE_DEVICES:-all}
+ENV NVIDIA_DRIVER_CAPABILITIES \
+    ${NVIDIA_DRIVER_CAPABILITIES:+$NVIDIA_DRIVER_CAPABILITIES,}graphics
 
 RUN echo "#!/bin/bash" >> /entrypoint.sh && \
     echo "set -e" >> /entrypoint.sh && \
@@ -82,8 +82,8 @@ RUN apt-get update && apt-get install ros-noetic-teleop-twist-keyboard nano
 
 WORKDIR /worlds
 
-RUN git clone https://github.com/Flying-Robots-LARC/mrs_gazebo_common_resources.git && \
-    git clone https://github.com/Flying-Robots-LARC/Petrobras_Competition.git && \
+RUN git clone https://github.com/Pequi-Mecanico-Home/mrs_gazebo_common_resources.git && \
+    git clone https://github.com/Pequi-Mecanico-Home/Petrobras_Competition.git && \
     cp -r /worlds/Petrobras_Competition/models /usr/share/gazebo-11/ && \
     cp -r /worlds/mrs_gazebo_common_resources/models /usr/share/gazebo-11/
 
