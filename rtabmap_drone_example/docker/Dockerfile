@@ -62,7 +62,7 @@ RUN source /ros_entrypoint.sh && \
     cd && \
     rm -rf ~/catkin_ws
     
-nvidia-container-runtime
+# nvidia-container-runtime
 ENV NVIDIA_VISIBLE_DEVICES \
      ${NVIDIA_VISIBLE_DEVICES:-all}
 ENV NVIDIA_DRIVER_CAPABILITIES \
