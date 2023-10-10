@@ -72,7 +72,7 @@ void joy_cb(const sensor_msgs::Joy::ConstPtr& msg){
 
 int main(int argc, char **argv)
 {
-	ros::init(argc, argv, "offboard_node");
+	ros::init(argc, argv, "offboard");
 	ros::NodeHandle nh;
 
 	ros::Subscriber state_sub = nh.subscribe<mavros_msgs::State>
@@ -93,7 +93,7 @@ int main(int argc, char **argv)
 	("/joy", 1, joy_cb);
 
 	//the setpoint publishing rate MUST be faster than 2Hz
-	ros::Rate rate(50.0);
+	ros::Rate rate(200.0);
 
 	// wait for FCU connection
 	while(ros::ok() && !current_state.connected){
